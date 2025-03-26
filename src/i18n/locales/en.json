@@ -1,0 +1,64 @@
+{
+  "header": {
+    "play": "Play Now",
+    "features": "Features",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Slice Game - Master the Art of Precision",
+    "subtitle": "Experience the thrill of precise slicing in this addictive arcade game that challenges your timing and accuracy."
+  },
+  "features": {
+    "title": "Game Features",
+    "controls": {
+      "title": "Intuitive Controls",
+      "description": "Simple yet engaging gameplay mechanics that anyone can pick up and enjoy."
+    },
+    "challenge": {
+      "title": "Progressive Challenge",
+      "description": "Each level brings new challenges and obstacles to test your skills."
+    },
+    "competition": {
+      "title": "Global Competition",
+      "description": "Compete with players worldwide and climb the leaderboard rankings."
+    }
+  },
+  "testimonials": {
+    "title": "Player Reviews",
+    "submitReview": "Submit Review",
+    "placeholder": "Share your experience (minimum 15 characters)",
+    "rating": "Rating"
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "free": {
+      "title": "Free",
+      "price": "$0",
+      "features": ["Basic gameplay", "3 levels", "Global leaderboard"]
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$4.99",
+      "features": ["All levels", "No ads", "Special items", "Premium support"]
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "q": "How do I start playing?",
+        "a": "Simply click the 'Play Now' button and the game will load instantly in your browser."
+      },
+      {
+        "q": "Is it free to play?",
+        "a": "Yes, the basic version is completely free. We also offer a Pro version with additional features."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2024 AngelaInNYU. All rights reserved.",
+    "contact": "Contact: angelajubejudy@126.com"
+  }
+}

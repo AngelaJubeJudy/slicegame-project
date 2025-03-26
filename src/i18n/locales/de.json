@@ -1,0 +1,64 @@
+{
+  "header": {
+    "play": "Jetzt Spielen",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "howItWorks": "Wie es Funktioniert",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Slice Game - Meistere die Kunst der Präzision",
+    "subtitle": "Erlebe den Nervenkitzel des präzisen Schneidens in diesem süchtig machenden Arcade-Spiel, das dein Timing und deine Genauigkeit herausfordert."
+  },
+  "features": {
+    "title": "Spielfunktionen",
+    "controls": {
+      "title": "Intuitive Steuerung",
+      "description": "Einfache, aber fesselnde Spielmechanik, die jeder schnell erlernen und genießen kann."
+    },
+    "challenge": {
+      "title": "Progressive Herausforderung",
+      "description": "Jedes Level bringt neue Herausforderungen und Hindernisse, um deine Fähigkeiten zu testen."
+    },
+    "competition": {
+      "title": "Globaler Wettbewerb",
+      "description": "Tritt gegen Spieler aus aller Welt an und klettere in der Rangliste nach oben."
+    }
+  },
+  "testimonials": {
+    "title": "Spielerbewertungen",
+    "submitReview": "Bewertung Abgeben",
+    "placeholder": "Teile deine Erfahrung (mindestens 15 Zeichen)",
+    "rating": "Bewertung"
+  },
+  "pricing": {
+    "title": "Wähle deinen Plan",
+    "free": {
+      "title": "Kostenlos",
+      "price": "0€",
+      "features": ["Grundspiel", "3 Level", "Globale Bestenliste"]
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "4,99€",
+      "features": ["Alle Level", "Keine Werbung", "Spezielle Items", "Premium Support"]
+    }
+  },
+  "faq": {
+    "title": "Häufig Gestellte Fragen",
+    "questions": [
+      {
+        "q": "Wie fange ich an zu spielen?",
+        "a": "Klicke einfach auf den 'Jetzt Spielen' Button und das Spiel lädt sofort in deinem Browser."
+      },
+      {
+        "q": "Ist es kostenlos?",
+        "a": "Ja, die Basisversion ist komplett kostenlos. Wir bieten auch eine Pro-Version mit zusätzlichen Funktionen an."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2024 AngelaInNYU. Alle Rechte vorbehalten.",
+    "contact": "Kontakt: angelajubejudy@126.com"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "header": {
+    "play": "Jugar Ahora",
+    "features": "Características",
+    "pricing": "Precios",
+    "howItWorks": "Cómo Funciona",
+    "faq": "Preguntas Frecuentes"
+  },
+  "hero": {
+    "title": "Slice Game - Domina el Arte de la Precisión",
+    "subtitle": "Experimenta la emoción de cortar con precisión en este adictivo juego arcade que desafía tu tiempo y precisión."
+  },
+  "features": {
+    "title": "Características del Juego",
+    "controls": {
+      "title": "Controles Intuitivos",
+      "description": "Mecánicas de juego simples pero atractivas que cualquiera puede aprender y disfrutar."
+    },
+    "challenge": {
+      "title": "Desafío Progresivo",
+      "description": "Cada nivel trae nuevos desafíos y obstáculos para poner a prueba tus habilidades."
+    },
+    "competition": {
+      "title": "Competencia Global",
+      "description": "Compite con jugadores de todo el mundo y sube en el ranking."
+    }
+  },
+  "testimonials": {
+    "title": "Reseñas de Jugadores",
+    "submitReview": "Enviar Reseña",
+    "placeholder": "Comparte tu experiencia (mínimo 15 caracteres)",
+    "rating": "Calificación"
+  },
+  "pricing": {
+    "title": "Elige tu Plan",
+    "free": {
+      "title": "Gratis",
+      "price": "$0",
+      "features": ["Juego básico", "3 niveles", "Tabla de clasificación global"]
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$4.99",
+      "features": ["Todos los niveles", "Sin anuncios", "Objetos especiales", "Soporte premium"]
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "questions": [
+      {
+        "q": "¿Cómo empiezo a jugar?",
+        "a": "Simplemente haz clic en el botón 'Jugar Ahora' y el juego se cargará instantáneamente en tu navegador."
+      },
+      {
+        "q": "¿Es gratis jugar?",
+        "a": "Sí, la versión básica es completamente gratuita. También ofrecemos una versión Pro con funciones adicionales."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2024 AngelaInNYU. Todos los derechos reservados.",
+    "contact": "Contacto: angelajubejudy@126.com"
+  }
+}

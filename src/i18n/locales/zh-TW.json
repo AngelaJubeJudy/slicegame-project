@@ -1,0 +1,64 @@
+{
+  "header": {
+    "play": "立即開始",
+    "features": "特色功能",
+    "pricing": "價格",
+    "howItWorks": "玩法說明",
+    "faq": "常見問題"
+  },
+  "hero": {
+    "title": "切片遊戲 - 掌握精準藝術",
+    "subtitle": "體驗這款考驗你時機和準確度的上癮街機遊戲，感受精準切割的快感。"
+  },
+  "features": {
+    "title": "遊戲特色",
+    "controls": {
+      "title": "直觀控制",
+      "description": "簡單但有趣的遊戲機制，任何人都能輕鬆上手。"
+    },
+    "challenge": {
+      "title": "漸進挑戰",
+      "description": "每個關卡都帶來新的挑戰和障礙，測試你的技能。"
+    },
+    "competition": {
+      "title": "全球競技",
+      "description": "與全球玩家競爭，攀登排行榜。"
+    }
+  },
+  "testimonials": {
+    "title": "玩家評價",
+    "submitReview": "提交評價",
+    "placeholder": "分享你的體驗（至少15個字符）",
+    "rating": "評分"
+  },
+  "pricing": {
+    "title": "選擇方案",
+    "free": {
+      "title": "免費版",
+      "price": "NT$0",
+      "features": ["基礎遊戲", "3個關卡", "全球排行榜"]
+    },
+    "pro": {
+      "title": "專業版",
+      "price": "NT$149",
+      "features": ["所有關卡", "無廣告", "特殊道具", "優先支援"]
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "questions": [
+      {
+        "q": "如何開始遊戲？",
+        "a": "只需點擊「立即開始」按鈕，遊戲就會在瀏覽器中即時載入。"
+      },
+      {
+        "q": "是否免費玩？",
+        "a": "是的，基礎版完全免費。我們還提供具有額外功能的專業版。"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2024 AngelaInNYU。保留所有權利。",
+    "contact": "聯絡方式：angelajubejudy@126.com"
+  }
+}
