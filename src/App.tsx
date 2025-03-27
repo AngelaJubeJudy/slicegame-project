@@ -5,12 +5,15 @@ import {
   MessageSquare, CreditCard, HelpCircle
 } from 'lucide-react';
 import { useTheme } from './hooks/useTheme';
+import { useReviews } from './hooks/useReviews';
 
 function App() {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
   const [review, setReview] = useState('');
   const [rating, setRating] = useState(5);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const { submitReview, loading: reviewLoading, error: reviewError } = useReviews();
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -20,6 +23,18 @@ function App() {
     { code: 'fr', name: 'Français' },
     { code: 'de', name: 'Deutsch' },
   ];
+
+  const handleSubmitReview = async () => {
+    try {
+      await submitReview(rating, review);
+      setReview('');
+      setRating(5);
+      setSubmitSuccess(true);
+      setTimeout(() => setSubmitSuccess(false), 3000);
+    } catch (err) {
+      // 错误已经在 hook 中处理
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-200">
@@ -72,8 +87,37 @@ function App() {
             frameBorder="0"
             allow="gamepad *;"
             title="Slice Game"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+            loading="lazy"
+            referrerPolicy="no-referrer"
           />
         </div>
+
+        {/* Game Controls Section */}
+        <section className="max-w-4xl mx-auto mb-16">
+          <div className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4">游戏控制说明</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-semibold mb-2">键盘控制</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                  <li>↑ 向上移动</li>
+                  <li>↓ 向下移动</li>
+                  <li>← 向左移动</li>
+                  <li>→ 向右移动</li>
+                  <li>空格键 切割</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">鼠标控制</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                  <li>左键 切割</li>
+                  <li>右键 特殊技能</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Features Section */}
         <section className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
@@ -106,6 +150,16 @@ function App() {
         <section className="max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">{t('testimonials.title')}</h2>
           <div className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
+            {reviewError && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                {reviewError}
+              </div>
+            )}
+            {submitSuccess && (
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                评价提交成功！
+              </div>
+            )}
             <div className="flex gap-2 mb-4">
               {[1, 2, 3, 4, 5].map((star) => (
                 <button
@@ -123,15 +177,23 @@ function App() {
               value={review}
               onChange={(e) => setReview(e.target.value)}
               placeholder={t('testimonials.placeholder')}
-              className="w-full p-4 border rounded-lg mb-4 dark:bg-primary-light dark:text-white"
+              className="w-full p-4 border rounded-lg mb-2 dark:bg-primary-light dark:text-white"
               rows={4}
               minLength={15}
             />
+            <div className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+              {review.length < 15 ? (
+                <span>还需要输入 {15 - review.length} 个字符</span>
+              ) : (
+                <span className="text-green-500">已达到最小字符要求</span>
+              )}
+            </div>
             <button
-              className="bg-accent-dark text-white px-6 py-2 rounded-lg hover:bg-accent transition-colors"
-              disabled={review.length < 15}
+              className="bg-accent-dark text-white px-6 py-2 rounded-lg hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={review.length < 15 || reviewLoading}
+              onClick={handleSubmitReview}
             >
-              {t('testimonials.submitReview')}
+              {reviewLoading ? '提交中...' : t('testimonials.submitReview')}
             </button>
           </div>
         </section>
