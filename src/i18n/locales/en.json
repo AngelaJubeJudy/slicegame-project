@@ -84,5 +84,12 @@
       "left": "Left Click - Slice",
       "right": "Right Click - Special Skill"
     }
+  },
+  "errors": {
+    "serverError": "Sorry, the server is having issues",
+    "clientError": "Sorry, the website is having issues",
+    "unknownError": "Sorry, something went wrong",
+    "duplicateOperation": "Sorry, this operation was already performed",
+    "notFound": "Sorry, the requested resource was not found"
   }
 }

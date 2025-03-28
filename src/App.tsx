@@ -23,6 +23,7 @@ function App() {
   const { 
     submitReview, 
     loading: reviewLoading, 
+    likeLoading,
     error: reviewError, 
     reviews,
     likeReview
@@ -241,6 +242,7 @@ function App() {
             <ReviewList
               reviews={reviews}
               onLike={likeReview}
+              likeLoading={likeLoading}
             />
           </div>
         </section>

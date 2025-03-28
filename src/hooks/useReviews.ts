@@ -1,19 +1,13 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
 import { generateUsername } from '../utils/username'
-
-export interface Review {
-  id: string
-  rating: number
-  content: string
-  username: string
-  created_at: string
-  likes: number
-}
+import { handleApiError } from '../utils/errorHandler'
+import type { Review } from '../types/review'
 
 export function useReviews() {
   const [reviews, setReviews] = useState<Review[]>([])
   const [loading, setLoading] = useState(false)
+  const [likeLoading, setLikeLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   // 获取评论列表
@@ -30,7 +24,7 @@ export function useReviews() {
       if (error) throw error
       setReviews(data)
     } catch (err) {
-      setError(err instanceof Error ? err.message : '获取评论失败')
+      setError(handleApiError(err))
     } finally {
       setLoading(false)
     }
@@ -60,7 +54,7 @@ export function useReviews() {
       setReviews(prev => [data[0], ...prev])
       return data[0]
     } catch (err) {
-      setError(err instanceof Error ? err.message : '提交评价失败')
+      setError(handleApiError(err))
       throw err
     } finally {
       setLoading(false)
@@ -81,7 +75,7 @@ export function useReviews() {
       if (error) throw error
       setReviews(prev => prev.filter(review => review.id !== id))
     } catch (err) {
-      setError(err instanceof Error ? err.message : '删除评论失败')
+      setError(handleApiError(err))
       throw err
     } finally {
       setLoading(false)
@@ -91,51 +85,42 @@ export function useReviews() {
   // 点赞评论
   const likeReview = async (id: string) => {
     try {
-      setLoading(true)
+      setLikeLoading(true)
       setError(null)
 
-      // 先获取当前评论
-      const { data: currentReview, error: fetchError } = await supabase
-        .from('reviews')
-        .select('*')
-        .eq('id', id)
-        .single()
-
-      if (fetchError) {
-        throw new Error('获取评论失败')
-      }
-
-      if (!currentReview) {
-        throw new Error('评论不存在')
-      }
-
-      // 更新likes值（如果已经点赞则取消点赞）
-      const newLikes = (currentReview.likes || 0) > 0 ? 0 : 1
-
+      // 使用原子操作更新点赞数
       const { data, error } = await supabase
-        .from('reviews')
-        .update({ likes: newLikes })
-        .eq('id', id)
-        .select()
+        .rpc('toggle_like', { p_review_id: id })
 
       if (error) {
-        throw new Error('更新点赞失败')
+        console.error('点赞操作失败:', error)
+        throw error
       }
 
       if (!data || data.length === 0) {
-        throw new Error('更新失败')
+        console.error('点赞操作未返回数据')
+        throw new Error('操作失败')
       }
+
+      const { likes, is_liked } = data[0]
 
       // 更新本地状态
       setReviews(prev => 
         prev.map(review => 
-          review.id === id ? { ...review, likes: newLikes } : review
+          review.id === id 
+            ? { 
+                ...review, 
+                likes,
+                is_liked
+              } 
+            : review
         )
       )
     } catch (err) {
-      setError(err instanceof Error ? err.message : '操作失败')
+      console.error('点赞操作失败:', err)
+      setError(handleApiError(err))
     } finally {
-      setLoading(false)
+      setLikeLoading(false)
     }
   }
 
@@ -146,6 +131,7 @@ export function useReviews() {
   return {
     reviews,
     loading,
+    likeLoading,
     error,
     submitReview,
     deleteReview,

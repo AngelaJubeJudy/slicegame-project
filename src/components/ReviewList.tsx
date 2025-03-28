@@ -6,11 +6,12 @@ import type { Review } from '../hooks/useReviews';
 interface ReviewListProps {
   reviews: Review[];
   onLike: (id: string) => Promise<void>;
+  likeLoading: boolean;
 }
 
 type SortType = 'latest' | 'hottest';
 
-export function ReviewList({ reviews, onLike }: ReviewListProps) {
+export function ReviewList({ reviews, onLike, likeLoading }: ReviewListProps) {
   const { t } = useTranslation();
   const [sortType, setSortType] = useState<SortType>('latest');
 
@@ -67,11 +68,12 @@ export function ReviewList({ reviews, onLike }: ReviewListProps) {
               </div>
               <button
                 onClick={() => onLike(review.id)}
+                disabled={likeLoading}
                 className={`p-1 rounded-full transition-colors ${
-                  review.likes > 0 
+                  review.is_liked 
                     ? 'bg-blue-100 dark:bg-blue-900 text-blue-500' 
                     : 'hover:bg-gray-100 dark:hover:bg-primary-light text-gray-500'
-                }`}
+                } ${likeLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <ThumbsUp className="w-4 h-4" />
               </button>

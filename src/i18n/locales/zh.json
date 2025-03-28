@@ -84,5 +84,12 @@
       "left": "左键 切割",
       "right": "右键 特殊技能"
     }
+  },
+  "errors": {
+    "serverError": "抱歉，服务器开小差了",
+    "clientError": "抱歉，网站开小差了",
+    "unknownError": "抱歉，发生了一些错误",
+    "duplicateOperation": "抱歉，重复操作了",
+    "notFound": "抱歉，找不到相关资源"
   }
 }
