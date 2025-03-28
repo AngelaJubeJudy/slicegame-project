@@ -29,7 +29,15 @@
     "title": "玩家评价",
     "submitReview": "提交评价",
     "placeholder": "分享你的体验（至少15个字符）",
-    "rating": "评分"
+    "rating": "评分",
+    "charactersNeeded": "还需要输入 {{count}} 个字符",
+    "charactersMet": "已达到最小字符要求",
+    "reviewList": "评价列表",
+    "sortLatest": "最新",
+    "sortHottest": "最热",
+    "likes": "赞",
+    "submitSuccess": "评价提交成功！",
+    "submitLoading": "提交中..."
   },
   "pricing": {
     "title": "选择套餐",
@@ -60,5 +68,21 @@
   "footer": {
     "copyright": "© 2024 AngelaInNYU。保留所有权利。",
     "contact": "联系方式：angelajubejudy@126.com"
+  },
+  "gameControls": {
+    "title": "游戏控制说明",
+    "keyboard": {
+      "title": "键盘控制",
+      "up": "↑ 向上移动",
+      "down": "↓ 向下移动",
+      "left": "← 向左移动",
+      "right": "→ 向右移动",
+      "space": "空格键 切割"
+    },
+    "mouse": {
+      "title": "鼠标控制",
+      "left": "左键 切割",
+      "right": "右键 特殊技能"
+    }
   }
 }

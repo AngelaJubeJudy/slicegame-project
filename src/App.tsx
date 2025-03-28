@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
-  Gamepad2, Star, Users, Sun, Moon, Languages,
-  MessageSquare, CreditCard, HelpCircle
+  Gamepad2, Star, Users, Sun, Moon,
+  ArrowUp, ArrowDown, ArrowLeft, ArrowRight, Space, MousePointer,
+  Keyboard, Mouse
 } from 'lucide-react';
 import { useTheme } from './hooks/useTheme';
 import { useReviews } from './hooks/useReviews';
+import { ReviewList } from './components/ReviewList';
+
+interface FAQ {
+  q: string;
+  a: string;
+}
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -13,7 +20,13 @@ function App() {
   const [review, setReview] = useState('');
   const [rating, setRating] = useState(5);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const { submitReview, loading: reviewLoading, error: reviewError } = useReviews();
+  const { 
+    submitReview, 
+    loading: reviewLoading, 
+    error: reviewError, 
+    reviews,
+    likeReview
+  } = useReviews();
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -26,12 +39,12 @@ function App() {
 
   const handleSubmitReview = async () => {
     try {
-      await submitReview(rating, review);
+      await submitReview(rating, review, i18n.language);
       setReview('');
       setRating(5);
       setSubmitSuccess(true);
       setTimeout(() => setSubmitSuccess(false), 3000);
-    } catch (err) {
+    } catch {
       // 错误已经在 hook 中处理
     }
   };
@@ -96,24 +109,51 @@ function App() {
         {/* Game Controls Section */}
         <section className="max-w-4xl mx-auto mb-16">
           <div className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-4">游戏控制说明</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">键盘控制</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-                  <li>↑ 向上移动</li>
-                  <li>↓ 向下移动</li>
-                  <li>← 向左移动</li>
-                  <li>→ 向右移动</li>
-                  <li>空格键 切割</li>
-                </ul>
+            <h2 className="text-2xl font-bold mb-6 text-center">{t('gameControls.title')}</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 mb-4">
+                  <Keyboard className="w-6 h-6 text-accent-dark" />
+                  <h3 className="text-xl font-semibold">{t('gameControls.keyboard.title')}</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <ArrowUp className="w-5 h-5 text-gray-500" />
+                    <span className="text-gray-600 dark:text-gray-300">{t('gameControls.keyboard.up')}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <ArrowDown className="w-5 h-5 text-gray-500" />
+                    <span className="text-gray-600 dark:text-gray-300">{t('gameControls.keyboard.down')}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <ArrowLeft className="w-5 h-5 text-gray-500" />
+                    <span className="text-gray-600 dark:text-gray-300">{t('gameControls.keyboard.left')}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <ArrowRight className="w-5 h-5 text-gray-500" />
+                    <span className="text-gray-600 dark:text-gray-300">{t('gameControls.keyboard.right')}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Space className="w-5 h-5 text-gray-500" />
+                    <span className="text-gray-600 dark:text-gray-300">{t('gameControls.keyboard.space')}</span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">鼠标控制</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-                  <li>左键 切割</li>
-                  <li>右键 特殊技能</li>
-                </ul>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 mb-4">
+                  <Mouse className="w-6 h-6 text-accent-dark" />
+                  <h3 className="text-xl font-semibold">{t('gameControls.mouse.title')}</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <MousePointer className="w-5 h-5 text-gray-500" />
+                    <span className="text-gray-600 dark:text-gray-300">{t('gameControls.mouse.left')}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <MousePointer className="w-5 h-5 text-gray-500" />
+                    <span className="text-gray-600 dark:text-gray-300">{t('gameControls.mouse.right')}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -157,7 +197,7 @@ function App() {
             )}
             {submitSuccess && (
               <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-                评价提交成功！
+                {t('testimonials.submitSuccess')}
               </div>
             )}
             <div className="flex gap-2 mb-4">
@@ -183,9 +223,9 @@ function App() {
             />
             <div className="text-sm text-gray-500 dark:text-gray-400 mb-4">
               {review.length < 15 ? (
-                <span>还需要输入 {15 - review.length} 个字符</span>
+                <span>{t('testimonials.charactersNeeded', { count: 15 - review.length })}</span>
               ) : (
-                <span className="text-green-500">已达到最小字符要求</span>
+                <span className="text-green-500">{t('testimonials.charactersMet')}</span>
               )}
             </div>
             <button
@@ -193,8 +233,15 @@ function App() {
               disabled={review.length < 15 || reviewLoading}
               onClick={handleSubmitReview}
             >
-              {reviewLoading ? '提交中...' : t('testimonials.submitReview')}
+              {reviewLoading ? t('testimonials.submitLoading') : t('testimonials.submitReview')}
             </button>
+          </div>
+
+          <div className="mt-8">
+            <ReviewList
+              reviews={reviews}
+              onLike={likeReview}
+            />
           </div>
         </section>
 
@@ -202,7 +249,7 @@ function App() {
         <section className="max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">{t('faq.title')}</h2>
           <div className="space-y-4">
-            {t('faq.questions', { returnObjects: true }).map((faq: any, index: number) => (
+            {(t('faq.questions', { returnObjects: true }) as FAQ[]).map((faq: FAQ, index: number) => (
               <div key={index} className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-2">{faq.q}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{faq.a}</p>

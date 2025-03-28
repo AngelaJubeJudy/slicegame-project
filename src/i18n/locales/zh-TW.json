@@ -29,7 +29,15 @@
     "title": "玩家評價",
     "submitReview": "提交評價",
     "placeholder": "分享你的體驗（至少15個字符）",
-    "rating": "評分"
+    "rating": "評分",
+    "charactersNeeded": "還需要輸入 {{count}} 個字符",
+    "charactersMet": "已達到最小字符要求",
+    "reviewList": "評價列表",
+    "sortLatest": "最新",
+    "sortHottest": "最熱",
+    "likes": "讚",
+    "submitSuccess": "評價提交成功！",
+    "submitLoading": "提交中..."
   },
   "pricing": {
     "title": "選擇方案",

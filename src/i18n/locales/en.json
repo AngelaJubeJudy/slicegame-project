@@ -29,7 +29,15 @@
     "title": "Player Reviews",
     "submitReview": "Submit Review",
     "placeholder": "Share your experience (minimum 15 characters)",
-    "rating": "Rating"
+    "rating": "Rating",
+    "charactersNeeded": "Need {{count}} more characters",
+    "charactersMet": "Minimum character requirement met",
+    "reviewList": "Review List",
+    "sortLatest": "Latest",
+    "sortHottest": "Hottest",
+    "likes": "likes",
+    "submitSuccess": "Review submitted successfully!",
+    "submitLoading": "Submitting..."
   },
   "pricing": {
     "title": "Choose Your Plan",
@@ -60,5 +68,21 @@
   "footer": {
     "copyright": "© 2024 AngelaInNYU. All rights reserved.",
     "contact": "Contact: angelajubejudy@126.com"
+  },
+  "gameControls": {
+    "title": "Game Controls",
+    "keyboard": {
+      "title": "Keyboard Controls",
+      "up": "Up Arrow - Move Up",
+      "down": "Down Arrow - Move Down",
+      "left": "Left Arrow - Move Left",
+      "right": "Right Arrow - Move Right",
+      "space": "Space - Slice"
+    },
+    "mouse": {
+      "title": "Mouse Controls",
+      "left": "Left Click - Slice",
+      "right": "Right Click - Special Skill"
+    }
   }
 }

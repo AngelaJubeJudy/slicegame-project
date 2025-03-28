@@ -29,7 +29,15 @@
     "title": "Spielerbewertungen",
     "submitReview": "Bewertung Abgeben",
     "placeholder": "Teile deine Erfahrung (mindestens 15 Zeichen)",
-    "rating": "Bewertung"
+    "rating": "Bewertung",
+    "charactersNeeded": "Noch {{count}} Zeichen benötigt",
+    "charactersMet": "Mindestzeichenzahl erreicht",
+    "reviewList": "Bewertungsliste",
+    "sortLatest": "Neueste",
+    "sortHottest": "Beliebteste",
+    "likes": "Likes",
+    "submitSuccess": "Bewertung erfolgreich abgegeben!",
+    "submitLoading": "Wird gesendet..."
   },
   "pricing": {
     "title": "Wähle deinen Plan",

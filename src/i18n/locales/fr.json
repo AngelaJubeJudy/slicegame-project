@@ -29,7 +29,15 @@
     "title": "Avis des Joueurs",
     "submitReview": "Soumettre un Avis",
     "placeholder": "Partagez votre expérience (minimum 15 caractères)",
-    "rating": "Note"
+    "rating": "Note",
+    "charactersNeeded": "Il vous manque {{count}} caractères",
+    "charactersMet": "Nombre minimum de caractères atteint",
+    "reviewList": "Liste des Avis",
+    "sortLatest": "Plus Récents",
+    "sortHottest": "Plus Populaires",
+    "likes": "j'aime",
+    "submitSuccess": "Avis soumis avec succès !",
+    "submitLoading": "Soumission en cours..."
   },
   "pricing": {
     "title": "Choisissez votre Forfait",

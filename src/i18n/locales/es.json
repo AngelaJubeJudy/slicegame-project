@@ -29,7 +29,15 @@
     "title": "Reseñas de Jugadores",
     "submitReview": "Enviar Reseña",
     "placeholder": "Comparte tu experiencia (mínimo 15 caracteres)",
-    "rating": "Calificación"
+    "rating": "Calificación",
+    "charactersNeeded": "Necesitas {{count}} caracteres más",
+    "charactersMet": "Requisito mínimo de caracteres cumplido",
+    "reviewList": "Lista de Reseñas",
+    "sortLatest": "Más Recientes",
+    "sortHottest": "Más Populares",
+    "likes": "me gusta",
+    "submitSuccess": "¡Reseña enviada con éxito!",
+    "submitLoading": "Enviando..."
   },
   "pricing": {
     "title": "Elige tu Plan",
