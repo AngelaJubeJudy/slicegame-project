@@ -1,26 +1,26 @@
 {
-  "_browser.CuwQUqKG.js": {
-    "file": "assets/browser.CuwQUqKG.js",
+  "_browser.0zM2G4sI.js": {
+    "file": "assets/browser.0zM2G4sI.js",
     "name": "browser",
     "isDynamicEntry": true,
     "imports": [
-      "_vendor.DerSW0Z0.js"
+      "_vendor.wOyPbeZn.js"
     ]
   },
-  "_vendor.DerSW0Z0.js": {
-    "file": "assets/vendor.DerSW0Z0.js",
+  "_vendor.wOyPbeZn.js": {
+    "file": "assets/vendor.wOyPbeZn.js",
     "name": "vendor"
   },
   "index.html": {
-    "file": "assets/index.ZrJ4ZNfA.js",
+    "file": "assets/index.Dz9vJGCr.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "imports": [
-      "_vendor.DerSW0Z0.js"
+      "_vendor.wOyPbeZn.js"
     ],
     "dynamicImports": [
-      "_browser.CuwQUqKG.js"
+      "_browser.0zM2G4sI.js"
     ],
     "css": [
       "assets/index.Da6y5bqN.css"
