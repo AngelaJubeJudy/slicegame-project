@@ -21,6 +21,11 @@ export default defineConfig({
         assetFileNames: 'assets/[name].[hash][extname]'
       },
     },
+    target: 'esnext',
+    modulePreload: true,
+    assetsInlineLimit: 4096,
+    manifest: true,
+    reportCompressedSize: false,
   },
   server: {
     port: 3000,
