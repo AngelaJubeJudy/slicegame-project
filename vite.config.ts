@@ -26,6 +26,9 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     manifest: true,
     reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
+    cssCodeSplit: true,
+    emptyOutDir: true,
   },
   server: {
     port: 3000,
