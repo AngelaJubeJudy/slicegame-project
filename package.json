@@ -7,10 +7,16 @@
     "node": ">=18.0.0"
   },
   "scripts": {
+    "start": "npm run dev",
     "dev": "vite",
     "build": "vite build",
+    "build:clean": "chmod +x ./build.sh && ./build.sh --clean",
+    "build:fast": "chmod +x ./build.sh && ./build.sh",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "clean": "rm -rf dist node_modules package-lock.json"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -23,6 +29,10 @@
     "react-i18next": "^14.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.27.0",
     "@eslint/js": "^9.9.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",

@@ -72,10 +72,54 @@ src/
 
 ## 🔧 Development Commands
 
-- `npm run dev`: Start development server
-- `npm run build`: Build for production
-- `npm run preview`: Preview production build
+All available commands are as follows:
+
+### Daily Development Commands
+
+- `npm start` or `npm run dev`: Start development server (supports hot reload)
+- `npm run preview`: Preview production build result
+
+### Build Related Commands
+
+- `npm run build:clean`: Full build (clean all dependencies and rebuild)
+- `npm run build:fast`: Quick build (retain existing dependencies)
+- `npm run clean`: Clean all build files and dependencies
+
+### Code Quality Commands
+
 - `npm run lint`: Run code linting
+- `npm run lint:fix`: Automatically fix code style issues
+- `npm run typecheck`: Run type checking
+
+### Build Process Description
+
+The build script (`build.sh`) will automatically perform the following steps:
+
+1. Check Node.js version (requires v18.0.0 or higher)
+2. Clean old build files
+3. Install/update dependencies
+4. Run type checking
+5. Run code linting
+6. Build project
+7. Verify build output
+
+Using the `build:clean` command will additionally clean `node_modules` and `package-lock.json`.
+
+### 🚀 Quick Start
+
+Development environment:
+```bash
+npm start
+```
+
+Production build:
+```bash
+# Full build (recommended for first build)
+npm run build:clean
+
+# Quick build (for daily development use)
+npm run build:fast
+```
 
 ## 🌐 Internationalization
 
@@ -180,10 +224,54 @@ src/
 
 ## 🔧 开发命令
 
-- `npm run dev`: 启动开发服务器
-- `npm run build`: 构建生产版本
-- `npm run preview`: 预览生产构建
+所有可用的命令如下：
+
+### 日常开发命令
+
+- `npm start` 或 `npm run dev`: 启动开发服务器（支持热重载）
+- `npm run preview`: 预览生产构建结果
+
+### 构建相关命令
+
+- `npm run build:clean`: 完整构建（清理所有依赖并重新构建）
+- `npm run build:fast`: 快速构建（保留现有依赖）
+- `npm run clean`: 清理所有构建文件和依赖
+
+### 代码质量命令
+
 - `npm run lint`: 运行代码检查
+- `npm run lint:fix`: 自动修复代码风格问题
+- `npm run typecheck`: 运行类型检查
+
+### 构建流程说明
+
+构建脚本 (`build.sh`) 会自动执行以下步骤：
+
+1. 检查 Node.js 版本（需要 v18.0.0 或更高）
+2. 清理旧的构建文件
+3. 安装/更新依赖
+4. 运行类型检查
+5. 运行代码检查
+6. 构建项目
+7. 验证构建输出
+
+使用 `build:clean` 命令时会额外清理 `node_modules` 和 `package-lock.json`。
+
+### 🚀 快速开始
+
+开发环境：
+```bash
+npm start
+```
+
+生产构建：
+```bash
+# 完整构建（推荐首次构建时使用）
+npm run build:clean
+
+# 快速构建（日常开发使用）
+npm run build:fast
+```
 
 ## 🌐 国际化支持
 
