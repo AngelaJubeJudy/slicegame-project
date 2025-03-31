@@ -99,9 +99,9 @@ function App() {
             src="https://www.crazygames.com/embed/slice-master" 
             className="w-full h-full"
             frameBorder="0"
-            allow="gamepad *;"
+            allow="gamepad *; fullscreen *;"
             title="Slice Game"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
             loading="lazy"
             referrerPolicy="no-referrer"
           />
