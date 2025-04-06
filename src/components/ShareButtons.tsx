@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';  // 添加 useState 导入
 import { Twitter, Linkedin, Youtube, Facebook, Share2 } from 'lucide-react';
 
 interface ShareButtonsProps {
@@ -33,43 +33,97 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, description }) 
     );
   };
 
+  // return (
+  //   <div className="flex items-center gap-4">
+  //     <button
+  //       onClick={() => handleShare('twitter')}
+  //       className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+  //       aria-label="Share on Twitter"
+  //     >
+  //       <Twitter className="w-5 h-5" />
+  //     </button>
+  //     <button
+  //       onClick={() => handleShare('linkedin')}
+  //       className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+  //       aria-label="Share on LinkedIn"
+  //     >
+  //       <Linkedin className="w-5 h-5" />
+  //     </button>
+  //     <button
+  //       onClick={() => handleShare('youtube')}
+  //       className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+  //       aria-label="Share on YouTube"
+  //     >
+  //       <Youtube className="w-5 h-5" />
+  //     </button>
+  //     <button
+  //       onClick={() => handleShare('facebook')}
+  //       className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+  //       aria-label="Share on Facebook"
+  //     >
+  //       <Facebook className="w-5 h-5" />
+  //     </button>
+  //     <button
+  //       onClick={() => handleShare('tiktok')}
+  //       className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+  //       aria-label="Share on TikTok"
+  //     >
+  //       <Share2 className="w-5 h-5" />
+  //     </button>
+  //   </div>
+  // );
+  // 添加状态来控制弹出菜单的显示
+  const [isOpen, setIsOpen] = useState(false);
+
+  // 修改返回的JSX，将多个按钮改为一个主按钮和弹出菜单
   return (
-    <div className="flex items-center gap-4">
+    <div className="relative">
       <button
-        onClick={() => handleShare('twitter')}
+        onClick={() => setIsOpen(!isOpen)}
         className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-        aria-label="Share on Twitter"
-      >
-        <Twitter className="w-5 h-5" />
-      </button>
-      <button
-        onClick={() => handleShare('linkedin')}
-        className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-        aria-label="Share on LinkedIn"
-      >
-        <Linkedin className="w-5 h-5" />
-      </button>
-      <button
-        onClick={() => handleShare('youtube')}
-        className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-        aria-label="Share on YouTube"
-      >
-        <Youtube className="w-5 h-5" />
-      </button>
-      <button
-        onClick={() => handleShare('facebook')}
-        className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-        aria-label="Share on Facebook"
-      >
-        <Facebook className="w-5 h-5" />
-      </button>
-      <button
-        onClick={() => handleShare('tiktok')}
-        className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-        aria-label="Share on TikTok"
+        aria-label="Share"
       >
         <Share2 className="w-5 h-5" />
       </button>
+      
+      {isOpen && (
+        <div className="absolute right-0 mt-2 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+          <div className="flex flex-col gap-2">
+            <button
+              onClick={() => handleShare('twitter')}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
+              aria-label="Share on Twitter"
+            >
+              <Twitter className="w-5 h-5" />
+              <span>Twitter</span>
+            </button>
+            <button
+              onClick={() => handleShare('linkedin')}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
+              aria-label="Share on LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
+              <span>LinkedIn</span>
+            </button>
+            <button
+              onClick={() => handleShare('youtube')}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
+              aria-label="Share on YouTube"
+            >
+              <Youtube className="w-5 h-5" />
+              <span>YouTube</span>
+            </button>
+            <button
+              onClick={() => handleShare('facebook')}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
+              aria-label="Share on Facebook"
+            >
+              <Facebook className="w-5 h-5" />
+              <span>Facebook</span>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
