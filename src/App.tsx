@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
   Gamepad2, Star, Users, Sun, Moon,
@@ -27,6 +27,10 @@ function App() {
     { code: 'fr', name: 'Français' },
     { code: 'de', name: 'Deutsch' },
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-200">
