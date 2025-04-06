@@ -1,81 +1,81 @@
 {
   "header": {
-    "play": "Jugar Ahora",
-    "features": "Características",
-    "pricing": "Precios",
-    "howItWorks": "Cómo Funciona",
-    "faq": "Preguntas Frecuentes"
+    "play": "Play Now",
+    "features": "Features",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "faq": "FAQ"
   },
   "hero": {
     "title": "Slice Game - Master the Art of Precision",
-    "subtitle": "Experimenta la emoción de cortar con precisión en este adictivo juego arcade que desafía tu tiempo y precisión."
+    "subtitle": "Experience the thrill of precise cutting in this addictive arcade game that challenges your timing and accuracy."
   },
   "features": {
-    "title": "Características del Juego",
+    "title": "Game Features",
     "controls": {
-      "title": "Controles Intuitivos",
-      "description": "Mecánicas de juego simples pero atractivas que cualquiera puede aprender y disfrutar."
+      "title": "Intuitive Controls",
+      "description": "Simple yet engaging game mechanics that anyone can learn and enjoy."
     },
     "challenge": {
-      "title": "Desafío Progresivo",
-      "description": "Cada nivel trae nuevos desafíos y obstáculos para poner a prueba tus habilidades."
+      "title": "Progressive Challenge",
+      "description": "Each level brings new challenges and obstacles to test your skills."
     },
     "competition": {
-      "title": "Competencia Global",
-      "description": "Compite con jugadores de todo el mundo y sube en el ranking."
+      "title": "Global Competition",
+      "description": "Compete with players worldwide and climb the leaderboard."
     }
   },
   "testimonials": {
-    "title": "Reseñas de Jugadores",
-    "submitReview": "Enviar Reseña",
-    "placeholder": "Comparte tu experiencia (mínimo 15 caracteres)",
-    "rating": "Calificación",
-    "charactersNeeded": "Necesitas {{count}} caracteres más",
-    "charactersMet": "Requisito mínimo de caracteres cumplido",
-    "reviewList": "Lista de Reseñas",
-    "sortLatest": "Más Recientes",
-    "sortHottest": "Más Populares",
-    "likes": "me gusta",
-    "submitSuccess": "¡Reseña enviada con éxito!",
-    "submitLoading": "Enviando..."
+    "title": "Player Reviews",
+    "submitReview": "Submit Review",
+    "placeholder": "Share your experience (minimum 15 characters)",
+    "rating": "Rating",
+    "charactersNeeded": "You need {{count}} more characters",
+    "charactersMet": "Minimum character requirement met",
+    "reviewList": "Review List",
+    "sortLatest": "Latest",
+    "sortHottest": "Hottest",
+    "likes": "likes",
+    "submitSuccess": "Review submitted successfully!",
+    "submitLoading": "Submitting..."
   },
   "pricing": {
-    "title": "Elige tu Plan",
+    "title": "Choose Your Plan",
     "free": {
-      "title": "Gratis",
-      "price": "$0",
+      "title": "Free",
+      "price": "/bin/zsh",
       "features": [
-        "Juego básico",
-        "3 niveles",
-        "Tabla de clasificación global"
+        "Basic Game",
+        "3 Levels",
+        "Global Leaderboard"
       ]
     },
     "pro": {
       "title": "Pro",
-      "price": "$4.99",
+      "price": ".99",
       "features": [
-        "Todos los niveles",
-        "Sin anuncios",
-        "Objetos especiales",
-        "Soporte premium"
+        "All Levels",
+        "No Ads",
+        "Special Items",
+        "Premium Support"
       ]
     }
   },
   "faq": {
-    "title": "Preguntas Frecuentes",
+    "title": "Frequently Asked Questions",
     "questions": [
       {
-        "q": "¿Cómo empiezo a jugar?",
-        "a": "Simplemente haz clic en el botón 'Jugar Ahora' y el juego se cargará instantáneamente en tu navegador."
+        "q": "How do I start playing?",
+        "a": "Simply click the Play Now button and the game will load instantly in your browser."
       },
       {
-        "q": "¿Es gratis jugar?",
-        "a": "Sí, la versión básica es completamente gratuita. También ofrecemos una versión Pro con funciones adicionales."
+        "q": "Is it free to play?",
+        "a": "Yes, the basic version is completely free. We also offer a Pro version with additional features."
       }
     ]
   },
   "footer": {
-    "copyright": "© 2024 AngelaInNYU. Todos los derechos reservados.",
+    "copyright": "© 2024 AngelaInNYU. All rights reserved.",
     "contact": ""
   },
   "errors": {
