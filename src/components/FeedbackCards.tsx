@@ -35,24 +35,22 @@ const FeedbackCards: React.FC = () => {
 
   const handleVote = (type: 'good' | 'bad' | 'normal') => {
     setFeedback(prev => {
-      const newVotes = { ...prev.userVotes };
-      const isVoting = !prev.userVotes[type];
-      
-      // 如果之前投过票，先取消之前的投票
-      Object.keys(newVotes).forEach(key => {
-        if (newVotes[key as keyof typeof newVotes]) {
-          prev[key as keyof typeof prev]--;
-        }
-      });
-
-      // 设置新的投票状态
-      newVotes[type] = isVoting;
-      
-      return {
-        ...prev,
-        [type]: isVoting ? prev[type] + 1 : prev[type],
-        userVotes: newVotes
+      const newState = {
+        good: prev.good,
+        bad: prev.bad,
+        normal: prev.normal,
+        userVotes: { ...prev.userVotes }
       };
+  
+      // 判断是否已经投过这个类型的票
+      const hasVoted = prev.userVotes[type];
+  
+      // 切换当前类型的投票状态
+      newState.userVotes[type] = !hasVoted;
+      // 如果是取消投票就减1，如果是投票就加1，同时确保不会小于0
+      newState[type] = Math.max(0, prev[type] + (hasVoted ? -1 : 1));
+  
+      return newState;
     });
   };
 
