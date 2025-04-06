@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
   Gamepad2, Star, Users, Sun, Moon,
@@ -6,8 +6,7 @@ import {
   Keyboard, Mouse
 } from 'lucide-react';
 import { useTheme } from './hooks/useTheme';
-import { useReviews } from './hooks/useReviews';
-import { ReviewList } from './components/ReviewList';
+import FeedbackCards from './components/FeedbackCards';
 
 interface FAQ {
   q: string;
@@ -17,17 +16,6 @@ interface FAQ {
 function App() {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
-  const [review, setReview] = useState('');
-  const [rating, setRating] = useState(5);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const { 
-    submitReview, 
-    loading: reviewLoading, 
-    likeLoading,
-    error: reviewError, 
-    reviews,
-    likeReview
-  } = useReviews();
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -37,18 +25,6 @@ function App() {
     { code: 'fr', name: 'Français' },
     { code: 'de', name: 'Deutsch' },
   ];
-
-  const handleSubmitReview = async () => {
-    try {
-      await submitReview(rating, review, i18n.language);
-      setReview('');
-      setRating(5);
-      setSubmitSuccess(true);
-      setTimeout(() => setSubmitSuccess(false), 3000);
-    } catch {
-      // 错误已经在 hook 中处理
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-200">
@@ -187,65 +163,8 @@ function App() {
           </div>
         </section>
 
-        {/* Review Section */}
-        <section className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">{t('testimonials.title')}</h2>
-          <div className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
-            {reviewError && (
-              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-                {reviewError}
-              </div>
-            )}
-            {submitSuccess && (
-              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-                {t('testimonials.submitSuccess')}
-              </div>
-            )}
-            <div className="flex gap-2 mb-4">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <button
-                  key={star}
-                  onClick={() => setRating(star)}
-                  className={`text-2xl ${
-                    star <= rating ? 'text-yellow-400' : 'text-gray-300'
-                  }`}
-                >
-                  ★
-                </button>
-              ))}
-            </div>
-            <textarea
-              value={review}
-              onChange={(e) => setReview(e.target.value)}
-              placeholder={t('testimonials.placeholder')}
-              className="w-full p-4 border rounded-lg mb-2 dark:bg-primary-light dark:text-white"
-              rows={4}
-              minLength={15}
-            />
-            <div className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-              {review.length < 15 ? (
-                <span>{t('testimonials.charactersNeeded', { count: 15 - review.length })}</span>
-              ) : (
-                <span className="text-green-500">{t('testimonials.charactersMet')}</span>
-              )}
-            </div>
-            <button
-              className="bg-accent-dark text-white px-6 py-2 rounded-lg hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={review.length < 15 || reviewLoading}
-              onClick={handleSubmitReview}
-            >
-              {reviewLoading ? t('testimonials.submitLoading') : t('testimonials.submitReview')}
-            </button>
-          </div>
-
-          <div className="mt-8">
-            <ReviewList
-              reviews={reviews}
-              onLike={likeReview}
-              likeLoading={likeLoading}
-            />
-          </div>
-        </section>
+        {/* Feedback Section */}
+        <FeedbackCards />
 
         {/* FAQ Section */}
         <section className="max-w-4xl mx-auto mb-16">

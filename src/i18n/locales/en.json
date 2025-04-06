@@ -1,95 +1,72 @@
 {
   "header": {
-    "play": "Play Now",
-    "features": "Features",
-    "pricing": "Pricing",
-    "howItWorks": "How It Works",
-    "faq": "FAQ"
+    "play": "Jugar Ahora",
+    "features": "Características",
+    "pricing": "Precios",
+    "howItWorks": "Cómo Funciona",
+    "faq": "Preguntas Frecuentes"
   },
   "hero": {
     "title": "Slice Game - Master the Art of Precision",
-    "subtitle": "Experience the thrill of precise slicing in this addictive arcade game that challenges your timing and accuracy."
+    "subtitle": "Experimenta la emoción de cortar con precisión en este adictivo juego arcade que desafía tu tiempo y precisión."
   },
   "features": {
-    "title": "Game Features",
+    "title": "Características del Juego",
     "controls": {
-      "title": "Intuitive Controls",
-      "description": "Simple yet engaging gameplay mechanics that anyone can pick up and enjoy."
+      "title": "Controles Intuitivos",
+      "description": "Mecánicas de juego simples pero atractivas que cualquiera puede aprender y disfrutar."
     },
     "challenge": {
-      "title": "Progressive Challenge",
-      "description": "Each level brings new challenges and obstacles to test your skills."
+      "title": "Desafío Progresivo",
+      "description": "Cada nivel trae nuevos desafíos y obstáculos para poner a prueba tus habilidades."
     },
     "competition": {
-      "title": "Global Competition",
-      "description": "Compete with players worldwide and climb the leaderboard rankings."
+      "title": "Competencia Global",
+      "description": "Compite con jugadores de todo el mundo y sube en el ranking."
     }
   },
   "testimonials": {
-    "title": "Player Reviews",
-    "submitReview": "Submit Review",
-    "placeholder": "Share your experience (minimum 15 characters)",
-    "rating": "Rating",
-    "charactersNeeded": "Need {{count}} more characters",
-    "charactersMet": "Minimum character requirement met",
-    "reviewList": "Review List",
-    "sortLatest": "Latest",
-    "sortHottest": "Hottest",
-    "likes": "likes",
-    "submitSuccess": "Review submitted successfully!",
-    "submitLoading": "Submitting..."
+    "title": "Reseñas de Jugadores",
+    "submitReview": "Enviar Reseña",
+    "placeholder": "Comparte tu experiencia (mínimo 15 caracteres)",
+    "rating": "Calificación",
+    "charactersNeeded": "Necesitas {{count}} caracteres más",
+    "charactersMet": "Requisito mínimo de caracteres cumplido",
+    "reviewList": "Lista de Reseñas",
+    "sortLatest": "Más Recientes",
+    "sortHottest": "Más Populares",
+    "likes": "me gusta",
+    "submitSuccess": "¡Reseña enviada con éxito!",
+    "submitLoading": "Enviando..."
   },
   "pricing": {
-    "title": "Choose Your Plan",
+    "title": "Elige tu Plan",
     "free": {
-      "title": "Free",
+      "title": "Gratis",
       "price": "$0",
-      "features": ["Basic gameplay", "3 levels", "Global leaderboard"]
+      "features": ["Juego básico", "3 niveles", "Tabla de clasificación global"]
     },
     "pro": {
       "title": "Pro",
       "price": "$4.99",
-      "features": ["All levels", "No ads", "Special items", "Premium support"]
+      "features": ["Todos los niveles", "Sin anuncios", "Objetos especiales", "Soporte premium"]
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "Preguntas Frecuentes",
     "questions": [
       {
-        "q": "How do I start playing?",
-        "a": "Simply click the 'Play Now' button and the game will load instantly in your browser."
+        "q": "¿Cómo empiezo a jugar?",
+        "a": "Simplemente haz clic en el botón 'Jugar Ahora' y el juego se cargará instantáneamente en tu navegador."
       },
       {
-        "q": "Is it free to play?",
-        "a": "Yes, the basic version is completely free. We also offer a Pro version with additional features."
+        "q": "¿Es gratis jugar?",
+        "a": "Sí, la versión básica es completamente gratuita. También ofrecemos una versión Pro con funciones adicionales."
       }
     ]
   },
   "footer": {
-    "copyright": "© 2024 AngelaInNYU. All rights reserved.",
-    "contact": "Contact: angelajubejudy@126.com"
-  },
-  "gameControls": {
-    "title": "Game Controls",
-    "keyboard": {
-      "title": "Keyboard Controls",
-      "up": "Up Arrow - Move Up",
-      "down": "Down Arrow - Move Down",
-      "left": "Left Arrow - Move Left",
-      "right": "Right Arrow - Move Right",
-      "space": "Space - Slice"
-    },
-    "mouse": {
-      "title": "Mouse Controls",
-      "left": "Left Click - Slice",
-      "right": "Right Click - Special Skill"
-    }
-  },
-  "errors": {
-    "serverError": "Sorry, the server is having issues",
-    "clientError": "Sorry, the website is having issues",
-    "unknownError": "Sorry, something went wrong",
-    "duplicateOperation": "Sorry, this operation was already performed",
-    "notFound": "Sorry, the requested resource was not found"
+    "copyright": "© 2024 AngelaInNYU. Todos los derechos reservados.",
+    "contact": "Contacto: angelajubejudy@126.com"
   }
 }
