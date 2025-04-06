@@ -68,5 +68,16 @@
   "footer": {
     "copyright": "© 2024 AngelaInNYU. Todos los derechos reservados.",
     "contact": "Contacto: angelajubejudy@126.com"
+  },
+  "errors": {
+    "serverError": "Oops! The server is taking a break~ Please refresh and try again",
+    "clientError": "Oops! Looks like the client is slacking off~ Please refresh and try again",
+    "unknownError": "Oops! Something unexpected happened~ Please refresh and try again",
+    "duplicateOperation": "Oops! This operation has already been done~",
+    "notFound": "Oops! The resource seems to have moved~",
+    "fetchCommentsFailed": "Oops! Failed to fetch comments~ Please refresh and try again",
+    "addCommentFailed": "Oops! Failed to add comment~ Please try again",
+    "deleteCommentFailed": "Oops! Failed to delete comment~ Please try again",
+    "updateFeedbackFailed": "Oops! Failed to update feedback~ Please try again"
   }
 }

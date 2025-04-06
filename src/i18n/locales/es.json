@@ -68,5 +68,16 @@
   "footer": {
     "copyright": "© 2024 AngelaInNYU. Todos los derechos reservados.",
     "contact": "Contacto: angelajubejudy@126.com"
+  },
+  "errors": {
+    "serverError": "¡Ups! El servidor está tomando un descanso~ Por favor, actualiza e intenta de nuevo",
+    "clientError": "¡Ups! Parece que el cliente está holgazaneando~ Por favor, actualiza e intenta de nuevo",
+    "unknownError": "¡Ups! Algo inesperado sucedió~ Por favor, actualiza e intenta de nuevo",
+    "duplicateOperation": "¡Ups! Esta operación ya se ha realizado~",
+    "notFound": "¡Ups! Parece que el recurso se ha movido~",
+    "fetchCommentsFailed": "¡Ups! Error al obtener comentarios~ Por favor, actualiza e intenta de nuevo",
+    "addCommentFailed": "¡Ups! Error al añadir comentario~ Por favor, intenta de nuevo",
+    "deleteCommentFailed": "¡Ups! Error al eliminar comentario~ Por favor, intenta de nuevo",
+    "updateFeedbackFailed": "¡Ups! Error al actualizar feedback~ Por favor, intenta de nuevo"
   }
 }

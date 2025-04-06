@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import { generateUsername } from '../utils/username'
 import { getComments, addComment as addCommentToStorage, deleteComment as deleteCommentFromStorage, updateFeedback as updateFeedbackInStorage } from '../lib/localStorage'
 import type { Comment } from '../lib/localStorage'
+import { useTranslation } from 'react-i18next'
 
 export function useComments() {
+  const { t } = useTranslation()
   const [comments, setComments] = useState<Comment[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -15,7 +17,7 @@ export function useComments() {
       const storedComments = getComments()
       setComments(storedComments)
     } catch (err) {
-      setError(err instanceof Error ? err.message : '获取评论失败')
+      setError(err instanceof Error ? err.message : t('errors.fetchCommentsFailed'))
     } finally {
       setLoading(false)
     }
@@ -30,7 +32,7 @@ export function useComments() {
       setComments(prev => [newComment, ...prev])
       return newComment
     } catch (err) {
-      setError(err instanceof Error ? err.message : '添加评论失败')
+      setError(err instanceof Error ? err.message : t('errors.addCommentFailed'))
       throw err
     } finally {
       setLoading(false)
@@ -43,7 +45,7 @@ export function useComments() {
       deleteCommentFromStorage(id)
       setComments(prev => prev.filter(comment => comment.id !== id))
     } catch (err) {
-      setError(err instanceof Error ? err.message : '删除评论失败')
+      setError(err instanceof Error ? err.message : t('errors.deleteCommentFailed'))
       throw err
     }
   }
@@ -54,7 +56,7 @@ export function useComments() {
       updateFeedbackInStorage(commentId, feedbackType)
       fetchComments() // 重新获取评论列表以更新状态
     } catch (err) {
-      setError(err instanceof Error ? err.message : '更新反馈失败')
+      setError(err instanceof Error ? err.message : t('errors.updateFeedbackFailed'))
     }
   }
 
