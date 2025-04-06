@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 import { useTheme } from './hooks/useTheme';
 import FeedbackCards from './components/FeedbackCards';
+import ShareButtons from './components/ShareButtons';
+import BackToTop from './components/BackToTop';
 
 interface FAQ {
   q: string;
@@ -37,6 +39,11 @@ function App() {
               <span className="text-2xl font-bold">SliceMaster</span>
             </div>
             <div className="flex items-center gap-4">
+              <ShareButtons 
+                url={window.location.href}
+                title={t('hero.title')}
+                description={t('hero.subtitle')}
+              />
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full hover:bg-primary-dark dark:hover:bg-primary-light transition-colors"
@@ -181,6 +188,8 @@ function App() {
           </div>
         </section>
       </main>
+
+      <BackToTop />
 
       {/* Footer */}
       <footer className="bg-primary-dark text-white py-6 mt-12">
