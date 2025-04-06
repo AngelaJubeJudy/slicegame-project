@@ -72,7 +72,7 @@ const FeedbackCards: React.FC = () => {
           }`} />
           <span className="text-2xl font-bold">{feedback.good}</span>
         </div>
-        <h3 className="text-xl font-semibold mb-2">{t('feedback.good')}</h3>
+        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-green-300">{t('feedback.good')}</h3>
         <p className="text-gray-600 dark:text-gray-300">{t('feedback.goodDescription')}</p>
       </div>
 
@@ -90,7 +90,7 @@ const FeedbackCards: React.FC = () => {
           }`} />
           <span className="text-2xl font-bold">{feedback.bad}</span>
         </div>
-        <h3 className="text-xl font-semibold mb-2">{t('feedback.bad')}</h3>
+        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-red-300">{t('feedback.bad')}</h3>
         <p className="text-gray-600 dark:text-gray-300">{t('feedback.badDescription')}</p>
       </div>
 
@@ -108,7 +108,7 @@ const FeedbackCards: React.FC = () => {
           }`} />
           <span className="text-2xl font-bold">{feedback.normal}</span>
         </div>
-        <h3 className="text-xl font-semibold mb-2">{t('feedback.normal')}</h3>
+        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-yellow-300">{t('feedback.normal')}</h3>
         <p className="text-gray-600 dark:text-gray-300">{t('feedback.normalDescription')}</p>
       </div>
     </div>

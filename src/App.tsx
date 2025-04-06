@@ -86,12 +86,12 @@ function App() {
         {/* Game Controls Section */}
         <section className="max-w-4xl mx-auto mb-16">
           <div className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6 text-center">{t('gameControls.title')}</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white">{t('gameControls.title')}</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="flex items-center gap-2 mb-4">
                   <Keyboard className="w-6 h-6 text-accent-dark" />
-                  <h3 className="text-xl font-semibold">{t('gameControls.keyboard.title')}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{t('gameControls.keyboard.title')}</h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -119,7 +119,7 @@ function App() {
               <div className="space-y-4">
                 <div className="flex items-center gap-2 mb-4">
                   <Mouse className="w-6 h-6 text-accent-dark" />
-                  <h3 className="text-xl font-semibold">{t('gameControls.mouse.title')}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{t('gameControls.mouse.title')}</h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -141,7 +141,7 @@ function App() {
           <div className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
             <div className="flex items-center gap-2 mb-4">
               <Gamepad2 className="w-6 h-6 text-accent-dark" />
-              <h2 className="text-xl font-semibold">{t('features.controls.title')}</h2>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t('features.controls.title')}</h2>
             </div>
             <p className="text-gray-600 dark:text-gray-300">{t('features.controls.description')}</p>
           </div>
@@ -149,7 +149,7 @@ function App() {
           <div className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
             <div className="flex items-center gap-2 mb-4">
               <Star className="w-6 h-6 text-accent-dark" />
-              <h2 className="text-xl font-semibold">{t('features.challenge.title')}</h2>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t('features.challenge.title')}</h2>
             </div>
             <p className="text-gray-600 dark:text-gray-300">{t('features.challenge.description')}</p>
           </div>
@@ -157,7 +157,7 @@ function App() {
           <div className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
             <div className="flex items-center gap-2 mb-4">
               <Users className="w-6 h-6 text-accent-dark" />
-              <h2 className="text-xl font-semibold">{t('features.competition.title')}</h2>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t('features.competition.title')}</h2>
             </div>
             <p className="text-gray-600 dark:text-gray-300">{t('features.competition.description')}</p>
           </div>
@@ -168,11 +168,11 @@ function App() {
 
         {/* FAQ Section */}
         <section className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">{t('faq.title')}</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">{t('faq.title')}</h2>
           <div className="space-y-4">
             {(t('faq.questions', { returnObjects: true }) as FAQ[]).map((faq: FAQ, index: number) => (
               <div key={index} className="bg-white dark:bg-primary-dark p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">{faq.q}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{faq.q}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{faq.a}</p>
               </div>
             ))}
