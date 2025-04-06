@@ -1,20 +1,20 @@
 {
   "header": {
-    "play": "立即開始",
+    "play": "立即开始",
     "features": "特色功能",
     "pricing": "價格",
     "howItWorks": "玩法說明",
     "faq": "常見問題"
   },
   "hero": {
-    "title": "切片遊戲 - 掌握精準藝術",
-    "subtitle": "體驗這款考驗你時機和準確度的上癮街機遊戲，感受精準切割的快感。"
+    "title": "切片游戏 - 掌握精準艺术",
+    "subtitle": "體驗這款考驗你時機和準確度的上癮街機游戏，感受精準切割的快感。"
   },
   "features": {
-    "title": "遊戲特色",
+    "title": "游戏特色",
     "controls": {
       "title": "直觀控制",
-      "description": "簡單但有趣的遊戲機制，任何人都能輕鬆上手。"
+      "description": "簡單但有趣的游戏機制，任何人都能輕鬆上手。"
     },
     "challenge": {
       "title": "漸進挑戰",
@@ -45,7 +45,7 @@
       "title": "免費版",
       "price": "NT$0",
       "features": [
-        "基礎遊戲",
+        "基礎游戏",
         "3個關卡",
         "全球排行榜"
       ]
@@ -65,8 +65,8 @@
     "title": "常見問題",
     "questions": [
       {
-        "q": "如何開始遊戲？",
-        "a": "只需點擊「立即開始」按鈕，遊戲就會在瀏覽器中即時載入。"
+        "q": "如何开始游戏？",
+        "a": "只需點擊「立即开始」按鈕，游戏就會在瀏覽器中即時載入。"
       },
       {
         "q": "是否免費玩？",
@@ -79,38 +79,30 @@
     "contact": ""
   },
   "errors": {
-    "serverError": "抱歉！伺服器開小差啦～請您重新整理頁面重試",
-    "clientError": "抱歉！客戶端又在摸魚～請您重新整理頁面重試",
-    "unknownError": "抱歉！發生了一些意外～請您重新整理頁面重試",
-    "duplicateOperation": "抱歉！這個操作已經完成啦～",
-    "notFound": "抱歉！資源好像換位置了～",
-    "fetchCommentsFailed": "抱歉！獲取評論失敗～請重新整理頁面重試",
-    "addCommentFailed": "抱歉！添加評論失敗～請重試",
-    "deleteCommentFailed": "抱歉！刪除評論失敗～請重試",
-    "updateFeedbackFailed": "抱歉！更新反饋失敗～請重試"
+    "serverError": "抱歉！服务器开小差啦～请您刷新页面重试",
+    "clientError": "抱歉！客户端又在摸鱼～请您刷新页面重试",
+    "unknownError": "抱歉！发生了一些意外～请您刷新页面重试",
+    "duplicateOperation": "抱歉！这个操作已经完成啦～",
+    "notFound": "抱歉！资源好像换位置了～",
+    "fetchCommentsFailed": "抱歉！获取评论失败～请刷新页面重试",
+    "addCommentFailed": "抱歉！添加评论失败～请重试",
+    "deleteCommentFailed": "抱歉！删除评论失败～请重试",
+    "updateFeedbackFailed": "抱歉！更新反馈失败～请重试"
   },
   "gameControls": {
-    "title": "遊戲控制",
+    "title": "游戏控制",
     "keyboard": {
-      "title": "鍵盤控制",
-      "up": "向上移動",
-      "down": "向下移動",
-      "left": "向左移動",
-      "right": "向右移動",
-      "space": "暫停遊戲"
+      "title": "键盘控制",
+      "up": "向上移动",
+      "down": "向下移动",
+      "left": "向左移动",
+      "right": "向右移动",
+      "space": "暂停游戏"
     },
     "mouse": {
-      "title": "滑鼠控制",
-      "left": "點擊並拖曳移動",
-      "right": "右鍵點擊暫停"
+      "title": "鼠标控制",
+      "left": "点击并拖动移动",
+      "right": "右键点击暂停"
     }
-  },
-  "feedback": {
-    "good": "很棒",
-    "goodDescription": "遊戲體驗非常好，玩起來很有趣！",
-    "bad": "不好",
-    "badDescription": "遊戲體驗不太好，還需要改進。",
-    "normal": "一般",
-    "normalDescription": "遊戲體驗一般，有待提升。"
   }
 }

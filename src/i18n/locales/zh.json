@@ -104,5 +104,13 @@
       "left": "点击并拖动移动",
       "right": "右键点击暂停"
     }
+  },
+  "feedback": {
+    "good": "很棒",
+    "goodDescription": "游戏体验非常好，玩起来很有趣！",
+    "bad": "不好",
+    "badDescription": "游戏体验不太好，还需要改进。",
+    "normal": "一般",
+    "normalDescription": "游戏体验一般，有待提升。"
   }
 }

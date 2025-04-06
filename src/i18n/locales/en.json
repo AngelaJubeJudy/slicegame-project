@@ -104,5 +104,13 @@
       "left": "Click and Drag to Move",
       "right": "Right Click to Pause"
     }
+  },
+  "feedback": {
+    "good": "Good",
+    "goodDescription": "Great gaming experience, really fun to play!",
+    "bad": "Bad",
+    "badDescription": "Not a good experience, needs improvement.",
+    "normal": "Normal",
+    "normalDescription": "Average experience, could be better."
   }
 }

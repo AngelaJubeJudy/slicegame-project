@@ -104,5 +104,13 @@
       "left": "Cliquer et Faire Glisser pour Déplacer",
       "right": "Clic Droit pour Mettre en Pause"
     }
+  },
+  "feedback": {
+    "good": "Bon",
+    "goodDescription": "Excellente expérience de jeu, très amusant !",
+    "bad": "Mauvais",
+    "badDescription": "Pas une bonne expérience, nécessite des améliorations.",
+    "normal": "Normal",
+    "normalDescription": "Expérience moyenne, pourrait être meilleure."
   }
 }

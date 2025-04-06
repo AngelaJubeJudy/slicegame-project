@@ -104,5 +104,13 @@
       "left": "Clic y Arrastrar para Mover",
       "right": "Clic Derecho para Pausar"
     }
+  },
+  "feedback": {
+    "good": "Bueno",
+    "goodDescription": "¡Excelente experiencia de juego, muy divertido!",
+    "bad": "Malo",
+    "badDescription": "No es una buena experiencia, necesita mejoras.",
+    "normal": "Normal",
+    "normalDescription": "Experiencia promedio, podría ser mejor."
   }
 }
