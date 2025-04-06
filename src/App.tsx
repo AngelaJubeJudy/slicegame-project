@@ -9,6 +9,7 @@ import { useTheme } from './hooks/useTheme';
 import FeedbackCards from './components/FeedbackCards';
 import ShareButtons from './components/ShareButtons';
 import BackToTop from './components/BackToTop';
+import { useLocation } from 'react-router-dom';
 
 interface FAQ {
   q: string;
@@ -18,6 +19,7 @@ interface FAQ {
 function App() {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -28,8 +30,14 @@ function App() {
     { code: 'de', name: 'Deutsch' },
   ];
   useEffect(() => {
+    // 确保 i18n 已初始化
+    if (!i18n.isInitialized) {
+      i18n.init();
+    }
+  }, [i18n]);
+  useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [location.pathname]);
   
 
   return (
