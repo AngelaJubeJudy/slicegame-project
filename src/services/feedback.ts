@@ -67,7 +67,8 @@ export const feedbackService = {
     },
 
     async updateFeedback(type: 'good' | 'bad' | 'normal'): Promise<FeedbackData> {
-        const userId = getAnonymousUserId();
+        try{
+            const userId = getAnonymousUserId();
         
         // 获取当前反馈记录
         const { data: currentData, error: fetchError } = await supabase
@@ -106,5 +107,9 @@ export const feedbackService = {
         }
       
         return this.getFeedback();
+        }catch(error){
+            console.error('Error in updateFeedback:', error);
+            throw error;
+        }
       }
 };
