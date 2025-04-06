@@ -1,5 +1,5 @@
-import React, { useState } from 'react';  // 添加 useState 导入
-import { FaTwitter, FaLinkedin, FaYoutube, FaFacebook, FaTiktok, FaShare } from 'react-icons/fa';  // 添加 FaShare
+import React, { useState } from 'react';
+import { FaTwitter, FaLinkedin, FaYoutube, FaFacebook, FaTiktok, FaShare } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 interface SocialShareProps {
@@ -10,6 +10,7 @@ interface SocialShareProps {
 
 const SocialShare: React.FC<SocialShareProps> = ({ url, title, description = '' }) => {
   const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);
@@ -26,62 +27,17 @@ const SocialShare: React.FC<SocialShareProps> = ({ url, title, description = '' 
     window.open(url, '_blank', 'width=600,height=400');
   };
 
-  // return (
-  //   <div className="flex flex-col items-center gap-4">
-  //     <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-  //       {t('share.title', '分享此页面')}
-  //     </h3>
-  //     <div className="flex gap-6 items-center">
-  //       <button
-  //         onClick={() => handleShare('twitter', shareLinks.twitter)}
-  //         className="text-gray-600 hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
-  //         aria-label="Share on Twitter"
-  //       >
-  //         <FaTwitter size={28} />
-  //       </button>
-  //       <button
-  //         onClick={() => handleShare('linkedin', shareLinks.linkedin)}
-  //         className="text-gray-600 hover:text-blue-700 transition-colors duration-300 transform hover:scale-110"
-  //         aria-label="Share on LinkedIn"
-  //       >
-  //         <FaLinkedin size={28} />
-  //       </button>
-  //       <button
-  //         onClick={() => handleShare('youtube', shareLinks.youtube)}
-  //         className="text-gray-600 hover:text-red-600 transition-colors duration-300 transform hover:scale-110"
-  //         aria-label="Share on YouTube"
-  //       >
-  //         <FaYoutube size={28} />
-  //       </button>
-  //       <button
-  //         onClick={() => handleShare('facebook', shareLinks.facebook)}
-  //         className="text-gray-600 hover:text-blue-600 transition-colors duration-300 transform hover:scale-110"
-  //         aria-label="Share on Facebook"
-  //       >
-  //         <FaFacebook size={28} />
-  //       </button>
-  //       <button
-  //         onClick={() => handleShare('tiktok', shareLinks.tiktok)}
-  //         className="text-gray-600 hover:text-black transition-colors duration-300 transform hover:scale-110"
-  //         aria-label="Share on TikTok"
-  //       >
-  //         <FaTiktok size={28} />
-  //       </button>
-  //     </div>
-  //   </div>
-  // );
-  // 添加状态来控制弹出菜单的显示
-  const [isOpen, setIsOpen] = useState(false);
-
-  // 修改返回的JSX，将多个按钮改为一个主按钮和弹出菜单
   return (
     <div className="flex flex-col items-center gap-4">
       <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
         {t('share.title', '分享此页面')}
       </h3>
-      <div className="relative">
+      <div 
+        className="relative"
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+      >
         <button
-          onClick={() => setIsOpen(!isOpen)}
           className="text-gray-600 hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
           aria-label="Share"
         >
@@ -89,7 +45,7 @@ const SocialShare: React.FC<SocialShareProps> = ({ url, title, description = '' 
         </button>
         
         {isOpen && (
-          <div className="absolute right-0 mt-2 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+          <div className="absolute right-0 mt-2 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-50">
             <div className="flex flex-col gap-2">
               <button
                 onClick={() => handleShare('twitter', shareLinks.twitter)}
@@ -137,7 +93,6 @@ const SocialShare: React.FC<SocialShareProps> = ({ url, title, description = '' 
       </div>
     </div>
   );
-
 };
 
 export default SocialShare;
