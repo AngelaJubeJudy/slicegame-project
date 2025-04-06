@@ -70,17 +70,19 @@ function App() {
         </p>
 
         {/* Game Container */}
-        <div className="aspect-[16/9] w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl mb-12">
-          <iframe 
-            src="https://www.crazygames.com/embed/slice-master" 
-            className="w-full h-full"
-            frameBorder="0"
-            allow="gamepad *; fullscreen *;"
-            title="Slice Game"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
-            loading="lazy"
-            referrerPolicy="no-referrer"
-          />
+        <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl mb-12">
+          <div className="aspect-[16/9] w-full">
+            <iframe 
+              src="https://www.crazygames.com/embed/slice-master" 
+              className="absolute top-0 left-0 w-full h-full"
+              frameBorder="0"
+              allow="gamepad *; fullscreen *;"
+              title="Slice Game"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+            />
+          </div>
         </div>
 
         {/* Game Controls Section */}
