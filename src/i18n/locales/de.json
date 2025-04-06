@@ -44,12 +44,21 @@
     "free": {
       "title": "Kostenlos",
       "price": "0€",
-      "features": ["Grundspiel", "3 Level", "Globale Bestenliste"]
+      "features": [
+        "Grundspiel",
+        "3 Level",
+        "Globale Bestenliste"
+      ]
     },
     "pro": {
       "title": "Pro",
       "price": "4,99€",
-      "features": ["Alle Level", "Keine Werbung", "Spezielle Items", "Premium Support"]
+      "features": [
+        "Alle Level",
+        "Keine Werbung",
+        "Spezielle Items",
+        "Premium Support"
+      ]
     }
   },
   "faq": {
@@ -79,5 +88,21 @@
     "addCommentFailed": "Ups! Kommentar konnte nicht hinzugefügt werden~ Bitte erneut versuchen",
     "deleteCommentFailed": "Ups! Kommentar konnte nicht gelöscht werden~ Bitte erneut versuchen",
     "updateFeedbackFailed": "Ups! Feedback konnte nicht aktualisiert werden~ Bitte erneut versuchen"
+  },
+  "gameControls": {
+    "title": "Spielsteuerung",
+    "keyboard": {
+      "title": "Tastatursteuerung",
+      "up": "Nach oben bewegen",
+      "down": "Nach unten bewegen",
+      "left": "Nach links bewegen",
+      "right": "Nach rechts bewegen",
+      "space": "Spiel pausieren"
+    },
+    "mouse": {
+      "title": "Maussteuerung",
+      "left": "Klicken und ziehen zum Bewegen",
+      "right": "Rechtsklick zum Pausieren"
+    }
   }
 }

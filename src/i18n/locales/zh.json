@@ -44,12 +44,21 @@
     "free": {
       "title": "免費版",
       "price": "NT$0",
-      "features": ["基礎游戏", "3個關卡", "全球排行榜"]
+      "features": [
+        "基礎游戏",
+        "3個關卡",
+        "全球排行榜"
+      ]
     },
     "pro": {
       "title": "專業版",
       "price": "NT$149",
-      "features": ["所有關卡", "無廣告", "特殊道具", "優先支援"]
+      "features": [
+        "所有關卡",
+        "無廣告",
+        "特殊道具",
+        "優先支援"
+      ]
     }
   },
   "faq": {
@@ -79,5 +88,21 @@
     "addCommentFailed": "抱歉！添加评论失败～请重试",
     "deleteCommentFailed": "抱歉！删除评论失败～请重试",
     "updateFeedbackFailed": "抱歉！更新反馈失败～请重试"
+  },
+  "gameControls": {
+    "title": "游戏控制",
+    "keyboard": {
+      "title": "键盘控制",
+      "up": "向上移动",
+      "down": "向下移动",
+      "left": "向左移动",
+      "right": "向右移动",
+      "space": "暂停游戏"
+    },
+    "mouse": {
+      "title": "鼠标控制",
+      "left": "点击并拖动移动",
+      "right": "右键点击暂停"
+    }
   }
 }

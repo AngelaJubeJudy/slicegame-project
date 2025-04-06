@@ -44,12 +44,21 @@
     "free": {
       "title": "Gratis",
       "price": "$0",
-      "features": ["Juego básico", "3 niveles", "Tabla de clasificación global"]
+      "features": [
+        "Juego básico",
+        "3 niveles",
+        "Tabla de clasificación global"
+      ]
     },
     "pro": {
       "title": "Pro",
       "price": "$4.99",
-      "features": ["Todos los niveles", "Sin anuncios", "Objetos especiales", "Soporte premium"]
+      "features": [
+        "Todos los niveles",
+        "Sin anuncios",
+        "Objetos especiales",
+        "Soporte premium"
+      ]
     }
   },
   "faq": {
@@ -79,5 +88,21 @@
     "addCommentFailed": "¡Ups! Error al añadir comentario~ Por favor, intenta de nuevo",
     "deleteCommentFailed": "¡Ups! Error al eliminar comentario~ Por favor, intenta de nuevo",
     "updateFeedbackFailed": "¡Ups! Error al actualizar feedback~ Por favor, intenta de nuevo"
+  },
+  "gameControls": {
+    "title": "Controles del Juego",
+    "keyboard": {
+      "title": "Controles de Teclado",
+      "up": "Mover Arriba",
+      "down": "Mover Abajo",
+      "left": "Mover Izquierda",
+      "right": "Mover Derecha",
+      "space": "Pausar Juego"
+    },
+    "mouse": {
+      "title": "Controles del Ratón",
+      "left": "Clic y Arrastrar para Mover",
+      "right": "Clic Derecho para Pausar"
+    }
   }
 }
