@@ -61,8 +61,8 @@ const FeedbackCards: React.FC = () => {
       <div 
         className={`p-6 rounded-lg shadow-md cursor-pointer transition-all ${
           feedback.userVotes.good 
-            ? 'bg-green-100 dark:bg-green-900' 
-            : 'bg-white dark:bg-gray-800'
+            ? 'bg-green-200 dark:bg-green-800' 
+            : 'bg-green-50 dark:bg-green-900/30'
         }`}
         onClick={() => handleVote('good')}
       >
@@ -79,8 +79,8 @@ const FeedbackCards: React.FC = () => {
       <div 
         className={`p-6 rounded-lg shadow-md cursor-pointer transition-all ${
           feedback.userVotes.bad 
-            ? 'bg-red-100 dark:bg-red-900' 
-            : 'bg-white dark:bg-gray-800'
+            ? 'bg-red-200 dark:bg-red-800' 
+            : 'bg-red-50 dark:bg-red-900/30'
         }`}
         onClick={() => handleVote('bad')}
       >
@@ -97,8 +97,8 @@ const FeedbackCards: React.FC = () => {
       <div 
         className={`p-6 rounded-lg shadow-md cursor-pointer transition-all ${
           feedback.userVotes.normal 
-            ? 'bg-yellow-100 dark:bg-yellow-900' 
-            : 'bg-white dark:bg-gray-800'
+            ? 'bg-yellow-200 dark:bg-yellow-800' 
+            : 'bg-yellow-50 dark:bg-yellow-900/30'
         }`}
         onClick={() => handleVote('normal')}
       >
@@ -115,4 +115,4 @@ const FeedbackCards: React.FC = () => {
   );
 };
 
-export default FeedbackCards; 
+export default FeedbackCards;
